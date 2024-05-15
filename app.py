@@ -34,7 +34,7 @@ def parse_gpx(file):
     return coordinates
 
 def geocode_address(address):
-    api_key = 'd483cf1386484f12be5a4dad81614292'
+    api_key = st.secrets["opencage_api_key"]
     geocoder = OpenCageGeocode(api_key)
     results = geocoder.geocode(address)
     if results and len(results):
